@@ -126,6 +126,89 @@ const dimensions = [
   ["hallucination_risk", "Hallucination risk", 75],
 ];
 
+const scoringModel = {
+  groundedness: {
+    components: [
+      ["claimSupport", "Claim support", 0.5],
+      ["evidenceAlignment", "Evidence alignment", 0.3],
+      ["unsupportedClaimControl", "Unsupported-claim control", 0.2],
+    ],
+  },
+  context_relevance: {
+    components: [
+      ["sourceMatch", "Relevant source match", 0.7],
+      ["rankQuality", "Rank quality", 0.2],
+      ["constraintFit", "Constraint satisfaction", 0.1],
+    ],
+  },
+  answer_relevance: {
+    components: [
+      ["directness", "Question directness", 0.45],
+      ["constraintHandling", "Constraint handling", 0.35],
+      ["completeness", "Completeness", 0.2],
+    ],
+  },
+  citation_quality: {
+    components: [
+      ["citationSupport", "Citation support", 0.5],
+      ["citationCoverage", "Citation coverage", 0.3],
+      ["citationPrecision", "Citation precision", 0.2],
+    ],
+  },
+  hallucination_risk: {
+    components: [
+      ["evidenceRiskControl", "Evidence-risk control", 0.4],
+      ["constraintSafety", "Constraint safety", 0.3],
+      ["unsupportedAnswerControl", "Unsupported-answer control", 0.3],
+    ],
+  },
+};
+
+const calculationInputs = {
+  "Q001-before": {
+    groundedness: { claimSupport: 70, evidenceAlignment: 55, unsupportedClaimControl: 52 },
+    context_relevance: { sourceMatch: 67, rankQuality: 35, constraintFit: 10 },
+    answer_relevance: { directness: 70, constraintHandling: 42, completeness: 60 },
+    citation_quality: { citationSupport: 70, citationCoverage: 65, citationPrecision: 58 },
+    hallucination_risk: { evidenceRiskControl: 70, constraintSafety: 50, unsupportedAnswerControl: 70 },
+  },
+  "Q001-after": {
+    groundedness: { claimSupport: 94, evidenceAlignment: 90, unsupportedClaimControl: 88 },
+    context_relevance: { sourceMatch: 95, rankQuality: 85, constraintFit: 75 },
+    answer_relevance: { directness: 96, constraintHandling: 92, completeness: 94 },
+    citation_quality: { citationSupport: 88, citationCoverage: 84, citationPrecision: 84 },
+    hallucination_risk: { evidenceRiskControl: 92, constraintSafety: 88, unsupportedAnswerControl: 90 },
+  },
+  "Q002-before": {
+    groundedness: { claimSupport: 40, evidenceAlignment: 35, unsupportedClaimControl: 38 },
+    context_relevance: { sourceMatch: 40, rankQuality: 55, constraintFit: 30 },
+    answer_relevance: { directness: 35, constraintHandling: 30, completeness: 44 },
+    citation_quality: { citationSupport: 24, citationCoverage: 30, citationPrecision: 33 },
+    hallucination_risk: { evidenceRiskControl: 25, constraintSafety: 35, unsupportedAnswerControl: 30 },
+  },
+  "Q002-after": {
+    groundedness: { claimSupport: 90, evidenceAlignment: 88, unsupportedClaimControl: 88 },
+    context_relevance: { sourceMatch: 85, rankQuality: 85, constraintFit: 70 },
+    answer_relevance: { directness: 88, constraintHandling: 85, completeness: 88 },
+    citation_quality: { citationSupport: 84, citationCoverage: 80, citationPrecision: 80 },
+    hallucination_risk: { evidenceRiskControl: 90, constraintSafety: 85, unsupportedAnswerControl: 88 },
+  },
+  "Q003-before": {
+    groundedness: { claimSupport: 22, evidenceAlignment: 24, unsupportedClaimControl: 28 },
+    context_relevance: { sourceMatch: 55, rankQuality: 45, constraintFit: 25 },
+    answer_relevance: { directness: 58, constraintHandling: 20, completeness: 58 },
+    citation_quality: { citationSupport: 20, citationCoverage: 20, citationPrecision: 20 },
+    hallucination_risk: { evidenceRiskControl: 10, constraintSafety: 20, unsupportedAnswerControl: 25 },
+  },
+  "Q003-after": {
+    groundedness: { claimSupport: 98, evidenceAlignment: 95, unsupportedClaimControl: 92 },
+    context_relevance: { sourceMatch: 92, rankQuality: 85, constraintFit: 80 },
+    answer_relevance: { directness: 96, constraintHandling: 95, completeness: 92 },
+    citation_quality: { citationSupport: 90, citationCoverage: 88, citationPrecision: 83 },
+    hallucination_risk: { evidenceRiskControl: 95, constraintSafety: 94, unsupportedAnswerControl: 93 },
+  },
+};
+
 const state = {
   questionId: "Q001",
   version: "before",
@@ -193,7 +276,7 @@ function render() {
 
   scoreGrid.innerHTML = dimensions
     .map(([key, label, threshold]) => {
-      const score = result[key];
+      const score = calculateScore(result, key);
       const status = score >= threshold ? "pass" : score >= threshold - 12 ? "watch" : "fail";
       return `
         <article class="metric ${status}">
@@ -204,6 +287,57 @@ function render() {
       `;
     })
     .join("");
+
+  renderCalculations(result);
+}
+
+function renderCalculations(result) {
+  const calculationGrid = document.querySelector("#calculationGrid");
+
+  calculationGrid.innerHTML = dimensions
+    .map(([key, label, threshold]) => {
+      const model = scoringModel[key];
+      const inputs = calculationInputs[calculationKey(result)][key];
+      const terms = model.components.map(([inputKey, componentLabel, weight]) => {
+        const value = inputs[inputKey];
+        return {
+          label: componentLabel,
+          value,
+          weight,
+          term: weight * value,
+        };
+      });
+      const rawScore = terms.reduce((sum, item) => sum + item.term, 0);
+      const score = Math.round(rawScore);
+      const formula = terms.map((item) => `${item.weight.toFixed(2)} * ${item.value}`).join(" + ");
+
+      return `
+        <article class="calculation-card">
+          <h3>${label}: ${score}</h3>
+          <code class="formula">${formula} = ${rawScore.toFixed(1)} -> ${score}</code>
+          <ul class="component-list">
+            ${terms
+              .map((item) => `<li>${item.label}: ${item.value} at ${Math.round(item.weight * 100)}%</li>`)
+              .join("")}
+          </ul>
+          <p class="answer-summary">Launch threshold: ${threshold}+. ${score >= threshold ? "Passes this dimension." : "Fails this dimension."}</p>
+        </article>
+      `;
+    })
+    .join("");
+}
+
+function calculateScore(result, key) {
+  const inputs = calculationInputs[calculationKey(result)][key];
+  const model = scoringModel[key];
+  const rawScore = model.components.reduce((sum, [inputKey, , weight]) => {
+    return sum + inputs[inputKey] * weight;
+  }, 0);
+  return Math.round(rawScore);
+}
+
+function calculationKey(result) {
+  return `${result.question_id}-${result.run_version}`;
 }
 
 init();

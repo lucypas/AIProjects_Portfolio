@@ -250,9 +250,56 @@ select {
 
 .answer-summary,
 #notes,
-#recommendation {
+#recommendation,
+.calculation-intro {
   color: var(--muted);
   line-height: 1.58;
+}
+
+.calculation-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.calculation-card {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfcfb;
+}
+
+.calculation-card h3 {
+  margin-top: 0;
+}
+
+.formula {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  background: var(--soft);
+  color: var(--ink);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 0.86rem;
+  overflow-x: auto;
+}
+
+.component-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.component-list li {
+  padding: 6px 8px;
+  border-radius: 999px;
+  background: var(--soft);
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 750;
 }
 
 .table-wrap {
