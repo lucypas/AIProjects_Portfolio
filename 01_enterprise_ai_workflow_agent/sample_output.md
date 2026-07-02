@@ -1,5 +1,7 @@
 # Sample Output
 
+Company and product names in this output are used only for demo purposes. The delivery plan is fictionalized and does not imply affiliation, endorsement, or internal access.
+
 ## Retrieved Context
 
 | Source | Type | Use in plan |

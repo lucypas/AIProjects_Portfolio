@@ -1,5 +1,7 @@
 # Architecture
 
+Company and product names in this architecture are illustrative sample scenarios only. No affiliation, endorsement, or internal access is implied.
+
 ```mermaid
 flowchart LR
   A["Messy business request"] --> B["Intake parser"]

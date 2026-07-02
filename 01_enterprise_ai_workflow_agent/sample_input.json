@@ -1,5 +1,6 @@
 {
   "request_id": "INTAKE-001",
+  "disclaimer": "Company and product names in this sample are used only for demo purposes. The request, policies, APIs, and context are fictionalized and do not imply affiliation, endorsement, or internal access.",
   "title": "Field services incident summarization and work order drafting",
   "messy_business_request": "We need something for the field services org. Dispatch managers keep asking if the AI gateway can summarize incoming priority incidents, check if a warranty exception applies, and draft the work order update before the technician arrives. It has to work with the ServiceNow queue and our internal parts API. Legal is nervous about sending customer notes to third-party models. We want a pilot in six weeks for the Northeast region, but nobody has written the success metrics yet.",
   "target_users": [

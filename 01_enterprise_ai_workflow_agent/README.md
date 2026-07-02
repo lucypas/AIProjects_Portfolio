@@ -4,6 +4,10 @@
 
 This project is a portfolio case study for an enterprise AI workflow assistant. It demonstrates how a messy business request can move through an agentic planning flow, retrieve relevant business context, and produce delivery artifacts that are ready for product, engineering, compliance, and human-review workflows.
 
+## Demo-Use Disclaimer
+
+Company and product names in this project are used only as illustrative sample scenarios. This project is not affiliated with, endorsed by, or based on internal information from any referenced company. All requests, policies, APIs, screenshots, and generated outputs are fictionalized for portfolio demonstration purposes.
+
 ## Why This Matters
 
 Enterprise AI work rarely starts with clean requirements. Teams usually begin with a stakeholder paragraph, a policy concern, multiple system dependencies, a timeline, and missing success metrics. This workflow agent helps convert that ambiguity into a structured delivery plan without skipping the human judgment needed for enterprise rollout.
