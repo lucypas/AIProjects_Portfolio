@@ -2,6 +2,8 @@
 
 This artifact demonstrates how to evaluate search quality and RAG answer quality for media recommendations, help-center answers, and AI assistant responses.
 
+This project is designed as a product-quality and launch-readiness artifact, not a full production RAG implementation. It demonstrates how a team could define eval sets, score retrieval and answer quality separately, identify failure modes, and decide whether an AI assistant/search feature is ready for release.
+
 ## What Is Included
 
 - `eval_rubric.md`: scoring rubric for groundedness, context relevance, answer relevance, citation quality, and hallucination risk.
@@ -29,3 +31,19 @@ An answer is launch-ready only when all required dimensions meet the threshold:
 - Hallucination risk: 75+
 
 If any dimension falls below threshold, the scenario stays on hold and the result should include an improvement recommendation.
+
+## Why This Matters
+
+RAG systems can appear correct in demos while still failing in production due to weak retrieval, unsupported claims, poor citations, safety-policy conflicts, or missed user constraints.
+
+This dashboard frames evaluation as a launch gate. The goal is to help product, engineering, data science, and compliance teams decide whether an AI answer experience is ready to ship, needs monitoring, or should remain on hold.
+
+## Dashboard Snapshots
+
+### Overview Dashboard
+
+![RAG Evaluation Dashboard Overview](screenshots/dashboard-overview.png)
+
+### Mobile / Compact View
+
+![RAG Evaluation Dashboard Mobile View](screenshots/dashboard-mobile.png)
