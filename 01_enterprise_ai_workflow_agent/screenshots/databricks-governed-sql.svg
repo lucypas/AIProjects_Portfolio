@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">Databricks governed SQL agent snapshot</title>
+  <desc id="desc">A governed analytics workflow for finance requests, Unity Catalog retrieval, SQL drafting, and policy review.</desc>
+  <rect width="1280" height="760" fill="#f7f8fb"/>
+  <rect x="44" y="44" width="1192" height="672" rx="8" fill="#ffffff" stroke="#d9e0ea"/>
+  <text x="88" y="104" fill="#607086" font-family="Arial, sans-serif" font-size="14" font-weight="700">DATABRICKS AGENTIC AI</text>
+  <text x="88" y="144" fill="#172033" font-family="Arial, sans-serif" font-size="34" font-weight="700">Finance Request to Governed SQL Draft</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="88" y="190" width="250" height="118" rx="8" fill="#fbfdff" stroke="#d9e0ea"/>
+    <text x="116" y="228" fill="#172033" font-size="20" font-weight="700">Request</text>
+    <text x="116" y="262" fill="#607086" font-size="16">Find governed tables for</text>
+    <text x="116" y="288" fill="#607086" font-size="16">monthly finance review</text>
+    <text x="370" y="258" fill="#607086" font-size="28">-></text>
+    <rect x="420" y="190" width="250" height="118" rx="8" fill="#eef2ff" stroke="#c7d2fe"/>
+    <text x="448" y="228" fill="#3730a3" font-size="20" font-weight="700">Retrieval</text>
+    <text x="448" y="262" fill="#172033" font-size="16">Unity Catalog, lineage,</text>
+    <text x="448" y="288" fill="#172033" font-size="16">policies, query examples</text>
+    <text x="702" y="258" fill="#607086" font-size="28">-></text>
+    <rect x="752" y="190" width="250" height="118" rx="8" fill="#f0fdfa" stroke="#99f6e4"/>
+    <text x="780" y="228" fill="#0f766e" font-size="20" font-weight="700">SQL Draft</text>
+    <text x="780" y="262" fill="#172033" font-size="16">Generated query with</text>
+    <text x="780" y="288" fill="#172033" font-size="16">policy explanation</text>
+  </g>
+  <rect x="88" y="366" width="512" height="206" rx="8" fill="#fbfdff" stroke="#d9e0ea"/>
+  <text x="116" y="406" fill="#172033" font-family="Arial, sans-serif" font-size="22" font-weight="700">Generated stories</text>
+  <text x="116" y="446" fill="#607086" font-family="Arial, sans-serif" font-size="17">- Find governed tables for finance requests</text>
+  <text x="116" y="480" fill="#607086" font-family="Arial, sans-serif" font-size="17">- Draft SQL with policy explanation</text>
+  <text x="116" y="514" fill="#607086" font-family="Arial, sans-serif" font-size="17">- Validate trust for MBR reporting</text>
+  <rect x="650" y="366" width="446" height="206" rx="8" fill="#ffe4e9" stroke="#fecdd3"/>
+  <text x="678" y="406" fill="#be123c" font-family="Arial, sans-serif" font-size="22" font-weight="700">Hard blockers</text>
+  <text x="678" y="446" fill="#7f1d1d" font-family="Arial, sans-serif" font-size="17">Payroll-adjacent fields</text>
+  <text x="678" y="480" fill="#7f1d1d" font-family="Arial, sans-serif" font-size="17">No query validation owner</text>
+  <text x="678" y="514" fill="#7f1d1d" font-family="Arial, sans-serif" font-size="17">Trust metrics undefined</text>
+  <rect x="88" y="628" width="1008" height="44" rx="22" fill="#111827"/>
+  <text x="592" y="657" fill="#ffffff" font-family="Arial, sans-serif" font-size="17" font-weight="700" text-anchor="middle">Export blocked until access policy, lineage, and validation owner are confirmed</text>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">Enterprise AI workflow eval rubric snapshot</title>
+  <desc id="desc">A rubric snapshot showing scoring dimensions and hard blockers for enterprise AI workflow delivery plans.</desc>
+  <rect width="1280" height="760" fill="#f5f7fb"/>
+  <rect x="44" y="44" width="1192" height="672" rx="8" fill="#ffffff" stroke="#d9e0ea"/>
+  <text x="88" y="104" fill="#607086" font-family="Arial, sans-serif" font-size="14" font-weight="700">QUALITY GATE</text>
+  <text x="88" y="144" fill="#172033" font-family="Arial, sans-serif" font-size="34" font-weight="700">Eval Rubric and Human Review Logic</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="88" y="196" width="500" height="74" rx="8" fill="#fbfdff" stroke="#d9e0ea"/>
+    <text x="118" y="242" fill="#172033" font-size="19" font-weight="700">Grounding</text>
+    <text x="530" y="242" fill="#0f766e" font-size="19" font-weight="700" text-anchor="end">25%</text>
+    <rect x="88" y="292" width="500" height="74" rx="8" fill="#fbfdff" stroke="#d9e0ea"/>
+    <text x="118" y="338" fill="#172033" font-size="19" font-weight="700">Jira readiness</text>
+    <text x="530" y="338" fill="#0f766e" font-size="19" font-weight="700" text-anchor="end">25%</text>
+    <rect x="88" y="388" width="500" height="74" rx="8" fill="#fbfdff" stroke="#d9e0ea"/>
+    <text x="118" y="434" fill="#172033" font-size="19" font-weight="700">Risk handling</text>
+    <text x="530" y="434" fill="#0f766e" font-size="19" font-weight="700" text-anchor="end">20%</text>
+    <rect x="88" y="484" width="500" height="74" rx="8" fill="#fbfdff" stroke="#d9e0ea"/>
+    <text x="118" y="530" fill="#172033" font-size="19" font-weight="700">Business value</text>
+    <text x="530" y="530" fill="#0f766e" font-size="19" font-weight="700" text-anchor="end">20%</text>
+    <rect x="88" y="580" width="500" height="74" rx="8" fill="#fbfdff" stroke="#d9e0ea"/>
+    <text x="118" y="626" fill="#172033" font-size="19" font-weight="700">Reviewability</text>
+    <text x="530" y="626" fill="#0f766e" font-size="19" font-weight="700" text-anchor="end">10%</text>
+  </g>
+  <rect x="672" y="196" width="456" height="458" rx="8" fill="#ffe4e9" stroke="#fecdd3"/>
+  <text x="704" y="242" fill="#be123c" font-family="Arial, sans-serif" font-size="24" font-weight="700">Hard blockers</text>
+  <text x="704" y="298" fill="#7f1d1d" font-family="Arial, sans-serif" font-size="18">Legal or compliance approval unresolved</text>
+  <text x="704" y="350" fill="#7f1d1d" font-family="Arial, sans-serif" font-size="18">Sensitive or protected data included</text>
+  <text x="704" y="402" fill="#7f1d1d" font-family="Arial, sans-serif" font-size="18">Success metrics missing or disputed</text>
+  <text x="704" y="454" fill="#7f1d1d" font-family="Arial, sans-serif" font-size="18">Human owner or approval path unclear</text>
+  <text x="704" y="506" fill="#7f1d1d" font-family="Arial, sans-serif" font-size="18">Compressed timeline increases rollout risk</text>
+  <rect x="704" y="566" width="360" height="48" rx="24" fill="#be123c"/>
+  <text x="884" y="598" fill="#ffffff" font-family="Arial, sans-serif" font-size="17" font-weight="700" text-anchor="middle">Block Jira export until reviewed</text>
+</svg>

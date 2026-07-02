@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">ServiceNow AI Gateway review gate snapshot</title>
+  <desc id="desc">A workflow snapshot for incident summarization, warranty lookup, work order drafting, and human review blockers.</desc>
+  <rect width="1280" height="760" fill="#f5f7fb"/>
+  <rect x="40" y="40" width="1200" height="680" rx="8" fill="#ffffff" stroke="#d9e0ea"/>
+  <text x="84" y="100" fill="#607086" font-family="Arial, sans-serif" font-size="14" font-weight="700">SERVICENOW AI GATEWAY</text>
+  <text x="84" y="140" fill="#172033" font-family="Arial, sans-serif" font-size="34" font-weight="700">Priority Incident to Governed Work Order Draft</text>
+  <rect x="84" y="184" width="520" height="170" rx="8" fill="#fbfdff" stroke="#d9e0ea"/>
+  <text x="112" y="224" fill="#172033" font-family="Arial, sans-serif" font-size="21" font-weight="700">Messy intake</text>
+  <text x="112" y="262" fill="#607086" font-family="Arial, sans-serif" font-size="17">Summarize priority incidents, check warranty exceptions,</text>
+  <text x="112" y="292" fill="#607086" font-family="Arial, sans-serif" font-size="17">draft work order updates, and handle customer-note policy.</text>
+  <rect x="654" y="184" width="500" height="170" rx="8" fill="#f0fdfa" stroke="#99f6e4"/>
+  <text x="682" y="224" fill="#0f766e" font-family="Arial, sans-serif" font-size="21" font-weight="700">Retrieved context</text>
+  <text x="682" y="262" fill="#172033" font-family="Arial, sans-serif" font-size="17">PROD-330 AI Gateway Capabilities</text>
+  <text x="682" y="292" fill="#172033" font-family="Arial, sans-serif" font-size="17">API-882 ServiceNow + Parts API</text>
+  <text x="682" y="322" fill="#172033" font-family="Arial, sans-serif" font-size="17">POL-212 Customer Data Controls</text>
+  <rect x="84" y="398" width="335" height="170" rx="8" fill="#fbfdff" stroke="#d9e0ea"/>
+  <text x="112" y="438" fill="#172033" font-family="Arial, sans-serif" font-size="21" font-weight="700">Jira stories</text>
+  <text x="112" y="476" fill="#607086" font-family="Arial, sans-serif" font-size="16">1. Summarize priority incidents</text>
+  <text x="112" y="506" fill="#607086" font-family="Arial, sans-serif" font-size="16">2. Draft governed work orders</text>
+  <text x="112" y="536" fill="#607086" font-family="Arial, sans-serif" font-size="16">3. Launch Northeast pilot</text>
+  <rect x="472" y="398" width="335" height="170" rx="8" fill="#fff7ed" stroke="#fed7aa"/>
+  <text x="500" y="438" fill="#b45309" font-family="Arial, sans-serif" font-size="21" font-weight="700">Risks</text>
+  <text x="500" y="476" fill="#172033" font-family="Arial, sans-serif" font-size="16">Legal approval unresolved</text>
+  <text x="500" y="506" fill="#172033" font-family="Arial, sans-serif" font-size="16">ServiceNow field mapping</text>
+  <text x="500" y="536" fill="#172033" font-family="Arial, sans-serif" font-size="16">Missing pilot metrics</text>
+  <rect x="860" y="398" width="294" height="170" rx="8" fill="#ffe4e9" stroke="#fecdd3"/>
+  <text x="888" y="438" fill="#be123c" font-family="Arial, sans-serif" font-size="21" font-weight="700">Review Required</text>
+  <text x="888" y="476" fill="#7f1d1d" font-family="Arial, sans-serif" font-size="16">Sensitive customer notes</text>
+  <text x="888" y="506" fill="#7f1d1d" font-family="Arial, sans-serif" font-size="16">Legal/compliance blocker</text>
+  <text x="888" y="536" fill="#7f1d1d" font-family="Arial, sans-serif" font-size="16">No success metrics owner</text>
+  <rect x="84" y="620" width="1070" height="44" rx="22" fill="#111827"/>
+  <text x="619" y="649" fill="#ffffff" font-family="Arial, sans-serif" font-size="17" font-weight="700" text-anchor="middle">Parser -> Retriever -> Planner -> Risk Critic -> Confidence Gate -> Jira-Ready Plan</text>
+</svg>

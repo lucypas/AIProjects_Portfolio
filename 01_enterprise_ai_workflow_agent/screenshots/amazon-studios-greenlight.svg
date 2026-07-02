@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">Amazon AI Studios greenlight workflow snapshot</title>
+  <desc id="desc">A studio workflow from rough show concept to pitch packet, with IP, talent, budget, and greenlight review risks.</desc>
+  <rect width="1280" height="760" fill="#f7f8fb"/>
+  <rect x="44" y="44" width="1192" height="672" rx="8" fill="#ffffff" stroke="#d9e0ea"/>
+  <text x="88" y="104" fill="#607086" font-family="Arial, sans-serif" font-size="14" font-weight="700">AMAZON AI STUDIOS</text>
+  <text x="88" y="144" fill="#172033" font-family="Arial, sans-serif" font-size="34" font-weight="700">Rough Show Concept to Greenlight-Ready Pitch Packet</text>
+  <rect x="88" y="198" width="258" height="272" rx="8" fill="#fbfdff" stroke="#d9e0ea"/>
+  <text x="116" y="238" fill="#172033" font-family="Arial, sans-serif" font-size="21" font-weight="700">Concept intake</text>
+  <text x="116" y="278" fill="#607086" font-family="Arial, sans-serif" font-size="16">Audience positioning</text>
+  <text x="116" y="310" fill="#607086" font-family="Arial, sans-serif" font-size="16">Comparable campaigns</text>
+  <text x="116" y="342" fill="#607086" font-family="Arial, sans-serif" font-size="16">Budget assumptions</text>
+  <text x="116" y="374" fill="#607086" font-family="Arial, sans-serif" font-size="16">Launch channel ideas</text>
+  <rect x="390" y="198" width="258" height="272" rx="8" fill="#f0fdfa" stroke="#99f6e4"/>
+  <text x="418" y="238" fill="#0f766e" font-family="Arial, sans-serif" font-size="21" font-weight="700">Pitch packet</text>
+  <text x="418" y="278" fill="#172033" font-family="Arial, sans-serif" font-size="16">Positioning brief</text>
+  <text x="418" y="310" fill="#172033" font-family="Arial, sans-serif" font-size="16">Production risks</text>
+  <text x="418" y="342" fill="#172033" font-family="Arial, sans-serif" font-size="16">Schedule assumptions</text>
+  <text x="418" y="374" fill="#172033" font-family="Arial, sans-serif" font-size="16">Greenlight checklist</text>
+  <rect x="692" y="198" width="258" height="272" rx="8" fill="#fff7ed" stroke="#fed7aa"/>
+  <text x="720" y="238" fill="#b45309" font-family="Arial, sans-serif" font-size="21" font-weight="700">Ambiguity</text>
+  <text x="720" y="278" fill="#172033" font-family="Arial, sans-serif" font-size="16">Creative assistant?</text>
+  <text x="720" y="310" fill="#172033" font-family="Arial, sans-serif" font-size="16">Planning tool?</text>
+  <text x="720" y="342" fill="#172033" font-family="Arial, sans-serif" font-size="16">Approval workflow?</text>
+  <text x="720" y="374" fill="#172033" font-family="Arial, sans-serif" font-size="16">Owner required</text>
+  <rect x="994" y="198" width="162" height="272" rx="8" fill="#ffe4e9" stroke="#fecdd3"/>
+  <text x="1022" y="238" fill="#be123c" font-family="Arial, sans-serif" font-size="21" font-weight="700">Legal</text>
+  <text x="1022" y="278" fill="#7f1d1d" font-family="Arial, sans-serif" font-size="16">IP similarity</text>
+  <text x="1022" y="310" fill="#7f1d1d" font-family="Arial, sans-serif" font-size="16">Talent terms</text>
+  <text x="1022" y="342" fill="#7f1d1d" font-family="Arial, sans-serif" font-size="16">Brand safety</text>
+  <rect x="88" y="566" width="1068" height="58" rx="8" fill="#111827"/>
+  <text x="622" y="603" fill="#ffffff" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Greenlight export blocked until rights, talent, and workflow ownership are clarified</text>
+</svg>

@@ -41,7 +41,19 @@ Reviewer actions:
 - `architecture.md` - architecture diagram and component notes
 - `sample_input.json` - messy request and knowledge-base context
 - `sample_output.md` - Jira-ready delivery plan output
-- `screenshots/workflow-agent-snapshot.svg` - visual snapshot of the workflow
+- `screenshots/` - visual snapshots for the workflow and role-specific scenarios
+
+## Snapshots
+
+| Snapshot | What it shows |
+| --- | --- |
+| `workflow-agent-snapshot.svg` | End-to-end workflow from intake to human review. |
+| `servicenow-review-gate.svg` | AI gateway request with legal, metrics, and API blockers. |
+| `databricks-governed-sql.svg` | Governed analytics agent for Unity Catalog and SQL validation. |
+| `disney-guest-relations.svg` | Guest-relations assistant with privacy and compensation guardrails. |
+| `openai-ai-success-pilot.svg` | AI Success pilot plan with evals, regulated data, and reviewer ownership. |
+| `amazon-studios-greenlight.svg` | Studio planning workflow with IP, talent, and greenlight risks. |
+| `eval-rubric-snapshot.svg` | Evaluation rubric and hard-blocker review logic. |
 
 ## Portfolio Positioning
 
