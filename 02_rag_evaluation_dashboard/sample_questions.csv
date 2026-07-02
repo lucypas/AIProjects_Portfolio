@@ -1,0 +1,4 @@
+question_id,domain,user_question,intent,expected_source_ids,risk_tier,success_criteria
+Q001,media,"What should we watch if we want family-friendly sci-fi, not dark fantasy?",Media recommendation,"M001;M002;M004",Medium,"Recommend family-friendly sci-fi options and explicitly avoid dark fantasy."
+Q002,help-center,"Why does voice search on my Roku remote stop working after an update?",Troubleshooting answer,H101,Medium,"Explain remote pairing, microphone permission, software update, and restart steps using help-center context."
+Q003,policy,"Can personalization override kids profile restrictions if my child likes action movies?",Policy answer,H102,High,"Answer no, explain age gates/title exclusions/PIN controls, and state that maturity ratings override personalization."
