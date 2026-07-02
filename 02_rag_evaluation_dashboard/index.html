@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RAG Evaluation Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="dashboard">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Portfolio Artifact 02</p>
+          <h1>RAG Evaluation Dashboard</h1>
+          <p class="hero-copy">
+            Test retrieval quality, answer relevance, citation quality, and hallucination risk before a RAG or search assistant ships.
+          </p>
+        </div>
+        <div class="status-card" id="launchCard">
+          <span>Launch gate</span>
+          <strong id="launchStatus">Hold</strong>
+          <p id="launchReason">Select a scenario to evaluate.</p>
+        </div>
+      </header>
+
+      <section class="controls" aria-label="Evaluation controls">
+        <label>
+          Question
+          <select id="questionSelect"></select>
+        </label>
+        <div class="segments" aria-label="Run version">
+          <button class="active" type="button" data-version="before">Before</button>
+          <button type="button" data-version="after">After</button>
+        </div>
+      </section>
+
+      <section class="score-grid" id="scoreGrid" aria-label="Score summary"></section>
+
+      <section class="two-column">
+        <article class="panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Retrieved Context</p>
+              <h2 id="retrievalProfile">Baseline</h2>
+            </div>
+            <span class="badge" id="retrievedIds"></span>
+          </div>
+          <p class="answer-summary" id="answerSummary"></p>
+        </article>
+
+        <article class="panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Reviewer Notes</p>
+              <h2 id="scenarioTitle">Scenario</h2>
+            </div>
+            <span class="badge" id="statusBadge">Hold</span>
+          </div>
+          <p id="notes"></p>
+          <h3>Recommended improvement</h3>
+          <p id="recommendation"></p>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Eval Dataset</p>
+            <h2>Sample questions</h2>
+          </div>
+          <a href="sample_questions.csv">Open CSV</a>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Question</th>
+                <th>Intent</th>
+                <th>Expected sources</th>
+                <th>Risk</th>
+              </tr>
+            </thead>
+            <tbody id="questionRows"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

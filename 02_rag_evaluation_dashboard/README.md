@@ -6,6 +6,7 @@ This project is designed as a product-quality and launch-readiness artifact, not
 
 ## What Is Included
 
+- `index.html`: local static dashboard UI for testing the eval scenarios.
 - `eval_rubric.md`: scoring rubric for groundedness, context relevance, answer relevance, citation quality, and hallucination risk.
 - `sample_questions.csv`: small eval set with user questions, intents, expected source IDs, and risk tiers.
 - `sample_results.csv`: before/after retrieval and answer quality results with pass/fail notes.
