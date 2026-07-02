@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">Enterprise AI Workflow Agent visual snapshot</title>
+  <desc id="desc">A dashboard-style snapshot showing request intake, retrieval, agent flow, delivery plan, and human review checkpoint.</desc>
+  <rect width="1280" height="760" fill="#f5f7fb"/>
+  <rect x="28" y="28" width="252" height="704" rx="8" fill="#111827"/>
+  <rect x="56" y="56" width="48" height="48" rx="8" fill="#99f6e4"/>
+  <text x="80" y="87" fill="#0f172a" font-family="Arial, sans-serif" font-size="17" font-weight="700" text-anchor="middle">AI</text>
+  <text x="120" y="72" fill="#99f6e4" font-family="Arial, sans-serif" font-size="12" font-weight="700">ENTERPRISE AI</text>
+  <text x="120" y="96" fill="#ffffff" font-family="Arial, sans-serif" font-size="22" font-weight="700">Workflow Agent</text>
+  <g font-family="Arial, sans-serif" font-size="15" fill="#dbeafe">
+    <rect x="56" y="148" width="196" height="42" rx="8" fill="#1f2937"/>
+    <text x="72" y="174">Request Intake</text>
+    <text x="72" y="230">Agent Flow</text>
+    <text x="72" y="286">Delivery Plan</text>
+    <text x="72" y="342">Human Review</text>
+    <text x="72" y="398">Eval Rubric</text>
+  </g>
+  <rect x="308" y="28" width="944" height="100" rx="8" fill="#ffffff" stroke="#d9e0ea"/>
+  <text x="336" y="64" fill="#607086" font-family="Arial, sans-serif" font-size="12" font-weight="700">PORTFOLIO DEMO</text>
+  <text x="336" y="98" fill="#172033" font-family="Arial, sans-serif" font-size="30" font-weight="700">From Messy Intake to Jira-Ready Delivery Plan</text>
+  <rect x="1064" y="62" width="150" height="34" rx="17" fill="#ffe4e9"/>
+  <text x="1139" y="84" fill="#7f1d1d" font-family="Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle">Review Required</text>
+  <rect x="308" y="154" width="455" height="206" rx="8" fill="#ffffff" stroke="#d9e0ea"/>
+  <text x="336" y="190" fill="#607086" font-family="Arial, sans-serif" font-size="12" font-weight="700">STEP 1</text>
+  <text x="336" y="220" fill="#172033" font-family="Arial, sans-serif" font-size="22" font-weight="700">Messy Business Request</text>
+  <rect x="336" y="240" width="399" height="86" rx="8" fill="#fbfdff" stroke="#d9e0ea"/>
+  <text x="354" y="266" fill="#607086" font-family="Arial, sans-serif" font-size="14">Summarize priority incidents, check warranty</text>
+  <text x="354" y="290" fill="#607086" font-family="Arial, sans-serif" font-size="14">exceptions, draft work orders, handle policy</text>
+  <text x="354" y="314" fill="#607086" font-family="Arial, sans-serif" font-size="14">concerns, and define pilot KPIs.</text>
+  <rect x="784" y="154" width="468" height="206" rx="8" fill="#ffffff" stroke="#d9e0ea"/>
+  <text x="812" y="190" fill="#607086" font-family="Arial, sans-serif" font-size="12" font-weight="700">RETRIEVED CONTEXT</text>
+  <text x="812" y="220" fill="#172033" font-family="Arial, sans-serif" font-size="22" font-weight="700">Relevant Knowledge</text>
+  <g font-family="Arial, sans-serif" font-size="14">
+    <rect x="812" y="242" width="188" height="36" rx="18" fill="#e0f2fe"/>
+    <text x="906" y="265" fill="#075985" font-weight="700" text-anchor="middle">PROD-330 Product</text>
+    <rect x="1020" y="242" width="176" height="36" rx="18" fill="#e0f2fe"/>
+    <text x="1108" y="265" fill="#075985" font-weight="700" text-anchor="middle">POL-212 Policy</text>
+    <rect x="812" y="294" width="158" height="36" rx="18" fill="#e0f2fe"/>
+    <text x="891" y="317" fill="#075985" font-weight="700" text-anchor="middle">API-882 API</text>
+    <rect x="990" y="294" width="166" height="36" rx="18" fill="#e0f2fe"/>
+    <text x="1073" y="317" fill="#075985" font-weight="700" text-anchor="middle">REQ-104 Ready</text>
+  </g>
+  <rect x="308" y="386" width="944" height="120" rx="8" fill="#ffffff" stroke="#d9e0ea"/>
+  <text x="336" y="422" fill="#607086" font-family="Arial, sans-serif" font-size="12" font-weight="700">LANGGRAPH-STYLE ORCHESTRATION</text>
+  <g font-family="Arial, sans-serif" font-size="13" font-weight="700">
+    <rect x="336" y="446" width="122" height="36" rx="18" fill="#def7ec"/>
+    <text x="397" y="469" fill="#064e3b" text-anchor="middle">Parser</text>
+    <text x="475" y="469" fill="#607086">-></text>
+    <rect x="500" y="446" width="122" height="36" rx="18" fill="#def7ec"/>
+    <text x="561" y="469" fill="#064e3b" text-anchor="middle">Retriever</text>
+    <text x="639" y="469" fill="#607086">-></text>
+    <rect x="664" y="446" width="122" height="36" rx="18" fill="#def7ec"/>
+    <text x="725" y="469" fill="#064e3b" text-anchor="middle">Planner</text>
+    <text x="803" y="469" fill="#607086">-></text>
+    <rect x="828" y="446" width="122" height="36" rx="18" fill="#fff3d6"/>
+    <text x="889" y="469" fill="#92400e" text-anchor="middle">Risk Critic</text>
+    <text x="967" y="469" fill="#607086">-></text>
+    <rect x="992" y="446" width="174" height="36" rx="18" fill="#ffe4e9"/>
+    <text x="1079" y="469" fill="#7f1d1d" text-anchor="middle">Human Review Gate</text>
+  </g>
+  <rect x="308" y="532" width="455" height="200" rx="8" fill="#ffffff" stroke="#d9e0ea"/>
+  <text x="336" y="568" fill="#607086" font-family="Arial, sans-serif" font-size="12" font-weight="700">JIRA-READY OUTPUT</text>
+  <text x="336" y="598" fill="#172033" font-family="Arial, sans-serif" font-size="22" font-weight="700">Delivery Plan</text>
+  <g fill="#607086" font-family="Arial, sans-serif" font-size="15">
+    <text x="336" y="636">- User stories and acceptance criteria</text>
+    <text x="336" y="664">- Risks, dependencies, KPIs</text>
+    <text x="336" y="692">- Launch checklist and eval rubric</text>
+  </g>
+  <rect x="784" y="532" width="468" height="200" rx="8" fill="#ffffff" stroke="#fecdd3"/>
+  <rect x="784" y="532" width="6" height="200" fill="#be123c"/>
+  <text x="812" y="568" fill="#607086" font-family="Arial, sans-serif" font-size="12" font-weight="700">HUMAN-IN-THE-LOOP CHECKPOINT</text>
+  <text x="812" y="598" fill="#172033" font-family="Arial, sans-serif" font-size="22" font-weight="700">Review Required</text>
+  <g fill="#607086" font-family="Arial, sans-serif" font-size="15">
+    <text x="812" y="636">Legal approval unresolved</text>
+    <text x="812" y="664">Success metrics missing</text>
+    <text x="812" y="692">ServiceNow and parts API owners needed</text>
+  </g>
+</svg>

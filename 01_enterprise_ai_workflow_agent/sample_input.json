@@ -1,0 +1,48 @@
+{
+  "request_id": "INTAKE-001",
+  "title": "Field services incident summarization and work order drafting",
+  "messy_business_request": "We need something for the field services org. Dispatch managers keep asking if the AI gateway can summarize incoming priority incidents, check if a warranty exception applies, and draft the work order update before the technician arrives. It has to work with the ServiceNow queue and our internal parts API. Legal is nervous about sending customer notes to third-party models. We want a pilot in six weeks for the Northeast region, but nobody has written the success metrics yet.",
+  "target_users": [
+    "Dispatch managers",
+    "Service coordinators",
+    "Field technicians",
+    "Operations leaders"
+  ],
+  "systems_mentioned": [
+    "ServiceNow",
+    "Internal parts API",
+    "AI gateway"
+  ],
+  "constraints": [
+    "Customer notes may contain sensitive data",
+    "Legal approval is unresolved",
+    "Pilot requested in six weeks",
+    "Success metrics are missing"
+  ],
+  "knowledge_base": [
+    {
+      "id": "REQ-104",
+      "type": "requirements",
+      "title": "Enterprise Intake Definition of Ready",
+      "summary": "Delivery plans must include personas, measurable KPIs, acceptance criteria, rollout scope, owner, dependencies, and a launch checklist before Jira handoff."
+    },
+    {
+      "id": "POL-212",
+      "type": "policy",
+      "title": "Customer Data and Third-Party Model Handling",
+      "summary": "Customer notes can be processed only through approved model gateways with redaction, retention limits, audit logs, and human review for uncertain classifications."
+    },
+    {
+      "id": "PROD-330",
+      "type": "product",
+      "title": "AI Gateway Workflow Capabilities",
+      "summary": "The gateway supports summarization, classification, retrieval-grounded drafting, confidence scoring, and approval checkpoints before external system writes."
+    },
+    {
+      "id": "API-882",
+      "type": "api",
+      "title": "ServiceNow and Parts API Integration Notes",
+      "summary": "ServiceNow incidents expose priority, customer tier, asset id, and notes. The parts API exposes warranty status, exception code, available inventory, and ETA."
+    }
+  ]
+}
