@@ -4,6 +4,8 @@
 
 This project is a portfolio case study for an enterprise AI workflow assistant. It demonstrates how a messy business request can move through an agentic planning flow, retrieve relevant business context, and produce delivery artifacts that are ready for product, engineering, compliance, and human-review workflows.
 
+This is not a general chatbot; it is a governed workflow pattern for converting ambiguous requests into execution-ready artifacts with explicit review gates.
+
 ## Demo-Use Disclaimer
 
 Company and product names in this project are used only as illustrative sample scenarios. This project is not affiliated with, endorsed by, or based on internal information from any referenced company. All requests, policies, APIs, screenshots, and generated outputs are fictionalized for portfolio demonstration purposes.
@@ -28,11 +30,13 @@ Enterprise AI work rarely starts with clean requirements. Teams usually begin wi
 3. **Planner** creates scoped delivery artifacts from the retrieved context.
 4. **Risk Critic** checks policy exposure, integration uncertainty, ownership gaps, and timeline pressure.
 5. **Confidence Gate** decides whether the plan can move forward or needs human review.
-6. **Publisher** formats user stories, acceptance criteria, KPIs, risks, and launch tasks for Jira handoff.
+6. **Delivery Publisher** formats user stories, acceptance criteria, KPIs, risks, and launch tasks for Jira handoff.
 
 ## Human-In-The-Loop Checkpoint
 
 The workflow does not treat generated output as automatically ready for launch. It routes the plan to human review when the request includes unresolved policy approval, regulated or sensitive data, weak retrieval coverage, missing metrics, unclear ownership, or low confidence.
+
+The system can draft delivery artifacts, but it should not automatically export to Jira when policy, ownership, metric, or integration blockers are unresolved.
 
 Reviewer actions:
 
@@ -50,13 +54,13 @@ Reviewer actions:
 ## Snapshots
 
 | Snapshot | What it shows |
-| --- | --- |
+|---|---|
 | `workflow-agent-snapshot.svg` | End-to-end workflow from intake to human review. |
 | `servicenow-review-gate.svg` | AI gateway request with legal, metrics, and API blockers. |
-| `databricks-governed-sql.svg` | Governed analytics agent for Unity Catalog and SQL validation. |
-| `disney-guest-relations.svg` | Guest-relations assistant with privacy and compensation guardrails. |
-| `openai-ai-success-pilot.svg` | AI Success pilot plan with evals, regulated data, and reviewer ownership. |
-| `amazon-studios-greenlight.svg` | Studio planning workflow with IP, talent, and greenlight risks. |
+| `databricks-governed-sql.svg` | Governed analytics agent for metadata, lineage, policies, and SQL validation. |
+| `disney-guest-relations.svg` | Guest-relations assistant with privacy, safety, and compensation guardrails. |
+| `openai-ai-success-pilot.svg` | AI Success pilot plan with evals, regulated data controls, and reviewer ownership. |
+| `amazon-studios-greenlight.svg` | Studio planning workflow with IP, talent, brand-safety, and greenlight risks. |
 | `eval-rubric-snapshot.svg` | Evaluation rubric and hard-blocker review logic. |
 
 ## Portfolio Positioning
@@ -65,11 +69,11 @@ This project is especially relevant for AI product, AI success, agentic workflow
 
 Best-fit role signals:
 
-- Disney AI Assistant
-- Databricks Agentic AI
-- ServiceNow AI Gateway
-- OpenAI AI Success
-- Amazon AI Studios
+- AI assistant product management
+- Agentic AI platform/product roles
+- AI gateway and enterprise workflow roles
+- AI success / customer pilot roles
+- Media and studio technology AI roles
 
 ## Accuracy Note
 

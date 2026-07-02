@@ -30,7 +30,7 @@ flowchart LR
 | Planner | Drafts user stories, acceptance criteria, KPIs, risks, dependencies, and launch tasks. |
 | Risk critic | Reviews the plan for compliance, integration, ownership, data, and timeline risks. |
 | Confidence gate | Routes the plan to human review when confidence is low or blockers are present. |
-| Publisher | Formats the output for product review and Jira handoff. |
+| Delivery Publisher | Formats the output for product review and Jira handoff. |
 
 ## Knowledge Base
 
