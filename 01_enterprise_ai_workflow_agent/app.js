@@ -606,12 +606,17 @@ function renderRubric() {
 }
 
 function renderConfidence(confidence, plan) {
-  const chip = $("#confidence-chip");
+  const reviewGateCard = $("#reviewGateCard");
+  const reviewGateStatus = $("#reviewGateStatus");
+  const reviewGateReason = $("#reviewGateReason");
   const reviewPanel = $("#review");
   const requiresReview = needsHumanReview(confidence, plan.reviewReasons);
 
-  chip.textContent = `Confidence: ${confidence}%`;
-  chip.classList.toggle("low", requiresReview);
+  reviewGateStatus.textContent = requiresReview ? "Hold" : "Ready";
+  reviewGateReason.textContent = `${confidence}% confidence. ${
+    requiresReview ? "Review blockers must be resolved before Jira export." : "No hard blockers detected."
+  }`;
+  reviewGateCard.classList.toggle("ready", !requiresReview);
   reviewPanel.classList.toggle("flagged", requiresReview);
   $("#review-title").textContent = `Review Required: ${requiresReview ? "Yes" : "No"}`;
   $("#review-summary").textContent = plan.review;
