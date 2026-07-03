@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Enterprise AI Workflow Agent</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Workspace navigation">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">AI</div>
+          <div>
+            <p class="eyebrow">Enterprise AI</p>
+            <h1>Workflow Agent</h1>
+          </div>
+        </div>
+
+        <nav class="nav-list" aria-label="Demo sections">
+          <a href="#intake" class="nav-link active">Request Intake</a>
+          <a href="#flow" class="nav-link">Agent Flow</a>
+          <a href="#delivery" class="nav-link">Delivery Plan</a>
+          <a href="#review" class="nav-link">Human Review</a>
+          <a href="#eval" class="nav-link">Eval Rubric</a>
+        </nav>
+
+        <div class="sidebar-panel">
+          <p class="panel-label">Knowledge Base</p>
+          <ul>
+            <li>Requirements docs</li>
+            <li>Policy notes</li>
+            <li>Product docs</li>
+            <li>Sample APIs</li>
+          </ul>
+        </div>
+      </aside>
+
+      <main class="workspace">
+        <section class="topbar" aria-label="Demo status">
+          <div>
+            <p class="eyebrow">Portfolio demo</p>
+            <h2>From Messy Intake to Jira-Ready Delivery Plan</h2>
+            <p class="demo-note">
+              Company and product names are used only as illustrative sample scenarios. No affiliation, endorsement, or internal access is implied.
+            </p>
+          </div>
+          <div class="confidence-chip" id="confidence-chip">Confidence: 82%</div>
+        </section>
+
+        <section id="intake" class="section-grid intake-grid">
+          <article class="work-panel input-panel">
+            <div class="section-heading">
+              <p class="eyebrow">Step 1</p>
+              <h3>Messy Business Request</h3>
+            </div>
+            <label class="field-label" for="scenario-select">Scenario preset</label>
+            <select id="scenario-select" aria-label="Scenario preset">
+              <option value="field">ServiceNow AI Gateway</option>
+              <option value="disney">Disney AI Assistant</option>
+              <option value="databricks">Databricks Agentic AI</option>
+              <option value="openai">OpenAI AI Success</option>
+              <option value="amazon">Amazon AI Studios</option>
+            </select>
+            <p class="demo-note compact">
+              Presets are fictionalized examples for demo purposes only.
+            </p>
+            <textarea id="request-input" aria-label="Business request"></textarea>
+            <div class="button-row">
+              <button id="run-agent" class="primary-button">Run Agent Flow</button>
+              <button id="load-sample" class="secondary-button">Reset Sample</button>
+            </div>
+          </article>
+
+          <article class="work-panel">
+            <div class="section-heading">
+              <p class="eyebrow">Retrieved context</p>
+              <h3>Relevant Knowledge</h3>
+            </div>
+            <div id="retrieval-results" class="retrieval-list"></div>
+          </article>
+        </section>
+
+        <section id="flow" class="work-panel">
+          <div class="section-heading">
+            <p class="eyebrow">LangGraph-style orchestration</p>
+            <h3>Agent Flow</h3>
+          </div>
+          <div id="flow-steps" class="flow-steps"></div>
+        </section>
+
+        <section id="delivery" class="section-grid delivery-grid">
+          <article class="work-panel output-panel">
+            <div class="section-heading">
+              <p class="eyebrow">Jira-ready</p>
+              <h3>User Stories</h3>
+            </div>
+            <div id="stories" class="story-list"></div>
+          </article>
+
+          <article class="work-panel output-panel">
+            <div class="section-heading">
+              <p class="eyebrow">Validation</p>
+              <h3>Acceptance Criteria</h3>
+            </div>
+            <ul id="criteria" class="check-list"></ul>
+          </article>
+
+          <article class="work-panel output-panel">
+            <div class="section-heading">
+              <p class="eyebrow">Delivery health</p>
+              <h3>Risks and Dependencies</h3>
+            </div>
+            <ul id="risks" class="risk-list"></ul>
+          </article>
+
+          <article class="work-panel output-panel">
+            <div class="section-heading">
+              <p class="eyebrow">Measurement</p>
+              <h3>KPIs and Launch Checklist</h3>
+            </div>
+            <div class="split-list">
+              <ul id="kpis" class="metric-list"></ul>
+              <ul id="launch" class="check-list"></ul>
+            </div>
+          </article>
+        </section>
+
+        <section id="review" class="work-panel review-panel">
+          <div>
+            <p class="eyebrow">Human-in-the-loop checkpoint</p>
+            <h3 id="review-title">Review Required: No</h3>
+            <p id="review-summary" class="muted"></p>
+            <ul id="review-reasons" class="review-reasons"></ul>
+          </div>
+          <div class="review-actions" aria-label="Reviewer actions">
+            <button class="secondary-button">Approve Plan</button>
+            <button class="secondary-button">Request Clarification</button>
+            <button class="secondary-button">Send to Architecture Review</button>
+          </div>
+        </section>
+
+        <section id="eval" class="work-panel">
+          <div class="section-heading">
+            <p class="eyebrow">Quality gate</p>
+            <h3>Eval Rubric Snapshot</h3>
+          </div>
+          <div id="rubric" class="rubric-grid"></div>
+        </section>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

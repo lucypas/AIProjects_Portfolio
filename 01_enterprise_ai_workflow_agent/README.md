@@ -46,10 +46,17 @@ Reviewer actions:
 
 ## Included Files
 
+- `index.html` - local static workflow UI for testing the scenario presets.
+- `app.js` - deterministic workflow logic for retrieval, planning, review gates, and rendered outputs.
+- `styles.css` - responsive enterprise workflow interface styling.
 - `architecture.md` - architecture diagram and component notes
 - `sample_input.json` - messy request and knowledge-base context
 - `sample_output.md` - Jira-ready delivery plan output
 - `screenshots/` - visual snapshots for the workflow and role-specific scenarios
+
+## How To Run
+
+Open `index.html` in a browser. Choose a scenario preset, run the agent flow, and review the generated stories, acceptance criteria, risks, KPIs, launch checklist, and human-review gate.
 
 ## Snapshots
 
