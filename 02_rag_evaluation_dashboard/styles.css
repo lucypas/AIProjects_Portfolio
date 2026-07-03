@@ -17,6 +17,13 @@
 
 * {
   box-sizing: border-box;
+  min-width: 0;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
 }
 
 body {
@@ -99,6 +106,7 @@ select {
   color: #dbeafe;
   text-decoration: none;
   font-weight: 750;
+  overflow-wrap: anywhere;
 }
 
 .rail-nav a.active,
@@ -188,6 +196,7 @@ h2,
 h3,
 p {
   margin-top: 0;
+  overflow-wrap: anywhere;
 }
 
 h1 {
@@ -195,6 +204,7 @@ h1 {
   font-size: clamp(2rem, 5vw, 4.4rem);
   line-height: 0.95;
   overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 h2 {
@@ -213,6 +223,7 @@ h3 {
   font-size: 1.08rem;
   line-height: 1.55;
   overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .status-card,
@@ -529,10 +540,12 @@ a {
   h1 {
     font-size: 1.85rem;
     line-height: 1.08;
+    max-width: 330px;
   }
 
   .hero-copy {
     font-size: 1rem;
+    max-width: 330px;
   }
 
   .rail-nav {
@@ -549,5 +562,14 @@ a {
   .two-column,
   .scenario-grid {
     grid-template-columns: 1fr;
+  }
+
+  .status-card,
+  .panel,
+  .metric,
+  .controls,
+  .scenario-card {
+    width: 100%;
+    max-width: 330px;
   }
 }

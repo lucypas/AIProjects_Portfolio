@@ -614,7 +614,7 @@ function renderConfidence(confidence, plan) {
 
   reviewGateStatus.textContent = requiresReview ? "Review Required" : "Ready";
   reviewGateReason.textContent = `${confidence}% confidence. ${
-    requiresReview ? "Review blockers must be resolved before Jira export." : "No hard blockers detected."
+    requiresReview ? "Resolve blockers before Jira export." : "No hard blockers detected."
   }`;
   reviewGateCard.classList.toggle("ready", !requiresReview);
   reviewPanel.classList.toggle("flagged", requiresReview);
