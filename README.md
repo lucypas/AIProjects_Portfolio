@@ -1,5 +1,5 @@
-# AIProjects_Portfolio ( AI Product & Technical Program Portfolio )
-Portfolio samples for evaluation/hiring purposes
+# AI Product & Technical Program Portfolio
+Portfolio samples for evaluation/hiring purposes.
 
 This portfolio showcases AI product, technical program management, and data-platform work across agentic workflows, RAG evaluation, media analytics, and streaming ads measurement.
 
@@ -134,6 +134,7 @@ My background includes cross-functional delivery across engineering, product, da
 ## Contact
 
 LinkedIn: https://www.linkedin.com/in/lucypascariu/
+
 GitHub: https://github.com/lucypas/AIProjects_Portfolio
 
 ## License and Use
