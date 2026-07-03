@@ -7,108 +7,144 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <main class="dashboard">
-      <header class="hero">
-        <div>
-          <p class="eyebrow">Portfolio Artifact 02</p>
-          <h1>RAG Evaluation Dashboard</h1>
-          <p class="hero-copy">
-            Test retrieval quality, answer relevance, citation quality, and hallucination risk before a RAG or search assistant ships.
+    <div class="presentation-shell">
+      <aside class="portfolio-rail" aria-label="Portfolio navigation">
+        <div class="rail-brand">
+          <span class="rail-mark">AI</span>
+          <div>
+            <p>AI Product Portfolio</p>
+            <strong>Evaluation Suite</strong>
+          </div>
+        </div>
+
+        <nav class="rail-nav" aria-label="Portfolio artifacts">
+          <a href="../01_enterprise_ai_workflow_agent/README.md">
+            <span>01</span>
+            Enterprise Workflow Agent
+          </a>
+          <a class="active" href="index.html">
+            <span>02</span>
+            RAG Evaluation Dashboard
+          </a>
+          <a href="eval_rubric.md">
+            <span>R</span>
+            Eval Rubric
+          </a>
+          <a href="sample_results.csv">
+            <span>D</span>
+            Sample Results
+          </a>
+        </nav>
+
+        <div class="rail-note">
+          <p>Portfolio demo</p>
+          <span>Launch readiness, retrieval quality, and answer-risk scoring.</span>
+        </div>
+      </aside>
+
+      <main class="dashboard">
+        <header class="hero">
+          <div>
+            <p class="eyebrow">Portfolio Artifact 02</p>
+            <h1>RAG Evaluation Dashboard</h1>
+            <p class="hero-copy">
+              Test retrieval quality, answer relevance, citation quality, and hallucination risk before a RAG or search assistant ships.
+            </p>
+          </div>
+          <div class="status-card" id="launchCard">
+            <span>Launch gate</span>
+            <strong id="launchStatus">Hold</strong>
+            <p id="launchReason">Select a scenario to evaluate.</p>
+          </div>
+        </header>
+
+        <section class="scenario-section" aria-label="Evaluation scenarios">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Evaluation Scenarios</p>
+              <h2>Representative RAG quality checks</h2>
+            </div>
+          </div>
+          <div class="scenario-grid" id="scenarioGrid"></div>
+        </section>
+
+        <section class="controls" aria-label="Evaluation controls">
+          <label>
+            Select eval case
+            <select id="questionSelect"></select>
+          </label>
+          <div class="segments" aria-label="Run version">
+            <button class="active" type="button" data-version="before">Before</button>
+            <button type="button" data-version="after">After</button>
+          </div>
+        </section>
+
+        <section class="score-grid" id="scoreGrid" aria-label="Score summary"></section>
+
+        <section class="two-column">
+          <article class="panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Retrieved Context</p>
+                <h2 id="retrievalProfile">Baseline</h2>
+              </div>
+              <span class="badge" id="retrievedIds"></span>
+            </div>
+            <p class="answer-summary" id="answerSummary"></p>
+          </article>
+
+          <article class="panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Reviewer Notes</p>
+                <h2 id="scenarioTitle">Scenario</h2>
+              </div>
+              <span class="badge" id="statusBadge">Hold</span>
+            </div>
+            <p id="notes"></p>
+            <h3>Recommended improvement</h3>
+            <p id="recommendation"></p>
+          </article>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Eval Dataset</p>
+              <h2>Sample questions</h2>
+            </div>
+            <a href="sample_questions.csv">Open CSV</a>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Question</th>
+                  <th>Intent</th>
+                  <th>Expected sources</th>
+                  <th>Risk</th>
+                </tr>
+              </thead>
+              <tbody id="questionRows"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="panel calculation-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Score Calculation</p>
+              <h2>Why these numbers are not random</h2>
+            </div>
+            <a href="eval_rubric.md">Open rubric</a>
+          </div>
+          <p class="calculation-intro">
+            Scores are calculated from weighted rubric components. The dashboard rounds each weighted sum to the nearest whole number, then compares it with the launch threshold.
           </p>
-        </div>
-        <div class="status-card" id="launchCard">
-          <span>Launch gate</span>
-          <strong id="launchStatus">Hold</strong>
-          <p id="launchReason">Select a scenario to evaluate.</p>
-        </div>
-      </header>
-
-      <section class="scenario-section" aria-label="Evaluation scenarios">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Evaluation Scenarios</p>
-            <h2>Representative RAG quality checks</h2>
-          </div>
-        </div>
-        <div class="scenario-grid" id="scenarioGrid"></div>
-      </section>
-
-      <section class="controls" aria-label="Evaluation controls">
-        <label>
-          Select eval case
-          <select id="questionSelect"></select>
-        </label>
-        <div class="segments" aria-label="Run version">
-          <button class="active" type="button" data-version="before">Before</button>
-          <button type="button" data-version="after">After</button>
-        </div>
-      </section>
-
-      <section class="score-grid" id="scoreGrid" aria-label="Score summary"></section>
-
-      <section class="two-column">
-        <article class="panel">
-          <div class="panel-heading">
-            <div>
-              <p class="eyebrow">Retrieved Context</p>
-              <h2 id="retrievalProfile">Baseline</h2>
-            </div>
-            <span class="badge" id="retrievedIds"></span>
-          </div>
-          <p class="answer-summary" id="answerSummary"></p>
-        </article>
-
-        <article class="panel">
-          <div class="panel-heading">
-            <div>
-              <p class="eyebrow">Reviewer Notes</p>
-              <h2 id="scenarioTitle">Scenario</h2>
-            </div>
-            <span class="badge" id="statusBadge">Hold</span>
-          </div>
-          <p id="notes"></p>
-          <h3>Recommended improvement</h3>
-          <p id="recommendation"></p>
-        </article>
-      </section>
-
-      <section class="panel">
-        <div class="panel-heading">
-          <div>
-            <p class="eyebrow">Eval Dataset</p>
-            <h2>Sample questions</h2>
-          </div>
-          <a href="sample_questions.csv">Open CSV</a>
-        </div>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Question</th>
-                <th>Intent</th>
-                <th>Expected sources</th>
-                <th>Risk</th>
-              </tr>
-            </thead>
-            <tbody id="questionRows"></tbody>
-          </table>
-        </div>
-      </section>
-
-      <section class="panel calculation-panel">
-        <div class="panel-heading">
-          <div>
-            <p class="eyebrow">Score Calculation</p>
-            <h2>Why these numbers are not random</h2>
-          </div>
-          <a href="eval_rubric.md">Open rubric</a>
-        </div>
-        <p class="calculation-intro">
-          Scores are calculated from weighted rubric components. The dashboard rounds each weighted sum to the nearest whole number, then compares it with the launch threshold.
-        </p>
-        <div class="calculation-grid" id="calculationGrid"></div>
-      </section>
-    </main>
+          <div class="calculation-grid" id="calculationGrid"></div>
+        </section>
+      </main>
+    </div>
 
     <script src="app.js"></script>
   </body>
