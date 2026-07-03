@@ -70,6 +70,16 @@ Open `index.html` in a browser. Choose a scenario preset, run the agent flow, an
 | `amazon-studios-greenlight.svg` | Studio planning workflow with IP, talent, brand-safety, and greenlight risks. |
 | `eval-rubric-snapshot.svg` | Evaluation rubric and hard-blocker review logic. |
 
+## Dashboard Snapshots
+
+### Workflow Overview
+
+![Enterprise AI Workflow Agent Overview](screenshots/workflow-overview.png)
+
+### Mobile / Compact View
+
+![Enterprise AI Workflow Agent Mobile View](screenshots/workflow-mobile.png)
+
 ## Portfolio Positioning
 
 This project is especially relevant for AI product, AI success, agentic workflow, and enterprise platform roles because it combines orchestration, retrieval, governance, evaluation, and product delivery thinking in one compact artifact.
