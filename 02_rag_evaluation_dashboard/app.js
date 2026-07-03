@@ -6,6 +6,9 @@ const questions = [
     intent: "Media recommendation",
     expected_source_ids: "M001;M002;M004",
     risk_tier: "Medium",
+    track: "Media Search",
+    track_focus: "Tests personalization, ranking, and explicit user constraints.",
+    failure_mode: "Ignored exclusion",
   },
   {
     question_id: "Q002",
@@ -14,6 +17,9 @@ const questions = [
     intent: "Troubleshooting answer",
     expected_source_ids: "H101",
     risk_tier: "Medium",
+    track: "Support Assistant",
+    track_focus: "Tests whether help-center retrieval beats unrelated product docs.",
+    failure_mode: "Wrong source",
   },
   {
     question_id: "Q003",
@@ -22,6 +28,9 @@ const questions = [
     intent: "Policy answer",
     expected_source_ids: "H102",
     risk_tier: "High",
+    track: "Policy / Safety",
+    track_focus: "Tests policy hierarchy, safety rules, and launch hold behavior.",
+    failure_mode: "Policy contradiction",
   },
 ];
 
@@ -222,6 +231,22 @@ function init() {
     .map((question) => `<option value="${question.question_id}">${question.user_question}</option>`)
     .join("");
 
+  document.querySelector("#trackGrid").innerHTML = questions
+    .map(
+      (question) => `
+        <button class="track-card" type="button" data-track-question="${question.question_id}">
+          <p class="eyebrow">${question.question_id} / ${question.domain}</p>
+          <strong>${question.track}</strong>
+          <p>${question.track_focus}</p>
+          <div class="track-meta">
+            <span>${question.risk_tier} risk</span>
+            <span>${question.failure_mode}</span>
+          </div>
+        </button>
+      `,
+    )
+    .join("");
+
   document.querySelector("#questionRows").innerHTML = questions
     .map(
       (question) => `
@@ -238,6 +263,13 @@ function init() {
   questionSelect.addEventListener("change", (event) => {
     state.questionId = event.target.value;
     render();
+  });
+
+  document.querySelectorAll("[data-track-question]").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.questionId = button.dataset.trackQuestion;
+      render();
+    });
   });
 
   document.querySelectorAll("[data-version]").forEach((button) => {
@@ -259,6 +291,9 @@ function render() {
   const statusClass = result.status.toLowerCase();
 
   questionSelect.value = state.questionId;
+  document.querySelectorAll("[data-track-question]").forEach((button) => {
+    button.classList.toggle("active", button.dataset.trackQuestion === state.questionId);
+  });
   document.querySelector("#retrievalProfile").textContent = result.retrieval_profile;
   document.querySelector("#retrievedIds").textContent = result.retrieved_source_ids;
   document.querySelector("#answerSummary").textContent = result.answer_summary;

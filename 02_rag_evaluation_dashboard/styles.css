@@ -38,7 +38,9 @@ select {
 .hero,
 .controls,
 .two-column,
-.score-grid {
+.score-grid,
+.track-grid,
+.workflow-strip {
   display: grid;
   gap: 16px;
 }
@@ -47,6 +49,14 @@ select {
   grid-template-columns: minmax(0, 1fr) 280px;
   align-items: end;
   margin-bottom: 18px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 16px;
+  margin-bottom: 12px;
 }
 
 .eyebrow {
@@ -91,11 +101,93 @@ h3 {
 .status-card,
 .panel,
 .metric,
-.controls {
+.controls,
+.track-card,
+.workflow-strip {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface);
   box-shadow: 0 18px 45px rgba(25, 38, 31, 0.08);
+}
+
+.track-section {
+  margin-bottom: 16px;
+}
+
+.track-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.track-card {
+  min-height: 178px;
+  padding: 16px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.track-card.active,
+.track-card:focus-visible,
+.track-card:hover {
+  border-color: rgba(39, 116, 95, 0.55);
+  outline: none;
+}
+
+.track-card strong {
+  display: block;
+  margin: 8px 0;
+  font-size: 1.08rem;
+}
+
+.track-card p {
+  margin-bottom: 12px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.track-card .track-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.track-meta span {
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: var(--soft);
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.workflow-strip {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin-bottom: 16px;
+  padding: 12px;
+  background: #fbfcfb;
+}
+
+.workflow-strip div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.workflow-strip strong {
+  display: grid;
+  place-items: center;
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  color: #fff;
+  background: var(--green);
+}
+
+.workflow-strip span {
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-weight: 800;
 }
 
 .status-card {
@@ -335,7 +427,12 @@ a {
   .hero,
   .controls,
   .score-grid,
-  .two-column {
+  .two-column,
+  .track-grid {
     grid-template-columns: 1fr;
+  }
+
+  .workflow-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
