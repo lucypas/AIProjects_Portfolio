@@ -526,7 +526,7 @@ function renderSources(sources) {
             <span class="score-pill">${source.score}% match</span>
           </header>
           <p class="muted">${source.excerpt}</p>
-          <span class="tag">${source.type} - ${source.id}</span>
+          <span class="tag">${source.id} ${source.type}</span>
         </article>
       `,
       )
@@ -612,7 +612,7 @@ function renderConfidence(confidence, plan) {
   const reviewPanel = $("#review");
   const requiresReview = needsHumanReview(confidence, plan.reviewReasons);
 
-  reviewGateStatus.textContent = requiresReview ? "Hold" : "Ready";
+  reviewGateStatus.textContent = requiresReview ? "Review Required" : "Ready";
   reviewGateReason.textContent = `${confidence}% confidence. ${
     requiresReview ? "Review blockers must be resolved before Jira export." : "No hard blockers detected."
   }`;
