@@ -1,0 +1,11 @@
+Risk,Category,Impact,Likelihood,Severity,Mitigation,Owner
+Consent status missing before measurement joins,Privacy and compliance,Privacy exposure and blocked reporting,Medium,High,Require consent_status and measurement_mode before joins; block personalized measurement on unknown consent,Privacy Lead
+Duplicate event IDs inflate impressions,Measurement accuracy,Advertiser trust and billing disputes,Medium,High,Use idempotent writes; monitor duplicate rate; quarantine duplicates before publish,Data Quality
+Late events distort daily reporting,Reporting,Incomplete or shifting advertiser reports,High,Medium,Track arrival latency; create freshness windows; label preliminary reports,Measurement PM
+Placement catalog drift breaks segmentation,Delivery operations,PMs cannot isolate placement-level defects,Medium,Medium,Validate placement_id against active catalog and route unmapped IDs to owner,Ad Delivery PM
+Ad latency improves fill but harms viewer experience,User experience,Revenue gains may increase churn or abandonment,Medium,High,Monitor P95 latency alongside fill rate; set latency guardrails,Ad Delivery PM
+Error taxonomy is too broad,Engineering operations,Slow root cause analysis,High,Medium,Normalize error_stage and error_code; require source-specific error metadata,Engineering Lead
+Revenue impact estimate is treated as billing truth,Business operations,Confusion between directional impact and financial reconciliation,Medium,Medium,Label impact as estimate; reconcile with billing before external use,Revenue Ops
+Dashboard alert fatigue reduces trust,Product adoption,Teams ignore valid incidents,Medium,Medium,Start with blocker alerts; tune thresholds; show owner and next action,Product Lead
+Regional policy change is not reflected in instrumentation,Privacy and compliance,Policy noncompliance in affected markets,Low,High,Version policy rules and require privacy review for schema changes,Privacy Lead
+Shadow instrumentation diverges from legacy metrics,Rollout,Stakeholders reject new dashboard,Medium,Medium,Run side-by-side comparison and document expected differences,Measurement PM

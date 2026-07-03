@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Streaming Ads Measurement Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">Streaming ads measurement</p>
+        <h1>Delivery, data quality, and consent-safe reporting readiness</h1>
+        <p class="subtitle">A product mockup for monitoring ad delivery, impressions, completions, latency, errors, revenue impact, and privacy-safe measurement coverage.</p>
+        <div class="badge-row" aria-label="Product areas">
+          <span class="badge">Ad Delivery</span>
+          <span class="badge">Reporting</span>
+          <span class="badge">Data Quality</span>
+          <span class="badge">Privacy</span>
+          <span class="badge">Revenue Ops</span>
+        </div>
+      </div>
+      <section class="scenario-panel" aria-label="Scenario selector">
+        <span class="panel-label">Scenario</span>
+        <div class="scenario-buttons">
+          <button class="scenario-button is-active" data-scenario="baseline">Baseline</button>
+          <button class="scenario-button" data-scenario="liveEvent">Live event risk</button>
+          <button class="scenario-button" data-scenario="consentRisk">Consent risk</button>
+        </div>
+      </section>
+    </header>
+
+    <section class="notice">
+      Demo-only mockup. Metrics, company contexts, policies, and event values are fictionalized portfolio examples.
+    </section>
+
+    <section class="grid kpis" aria-label="Executive KPIs">
+      <article class="card kpi">
+        <div class="label">Fill Rate</div>
+        <div class="value good" data-kpi="fillRate">91.8%</div>
+        <div class="delta" data-kpi="fillRateNote">+2.4 pts vs 7-day baseline</div>
+      </article>
+      <article class="card kpi">
+        <div class="label">Completion Rate</div>
+        <div class="value" data-kpi="completionRate">87.3%</div>
+        <div class="delta warn" data-kpi="completionRateNote">-1.1 pts on mobile midroll</div>
+      </article>
+      <article class="card kpi">
+        <div class="label">P95 Latency</div>
+        <div class="value warn" data-kpi="latency">1.42s</div>
+        <div class="delta" data-kpi="latencyNote">Creative fetch is top driver</div>
+      </article>
+      <article class="card kpi">
+        <div class="label">Ad Error Rate</div>
+        <div class="value bad" data-kpi="errorRate">2.7%</div>
+        <div class="delta bad" data-kpi="errorRateNote">Blocker on live midroll</div>
+      </article>
+      <article class="card kpi">
+        <div class="label">Revenue Impact</div>
+        <div class="value" data-kpi="revenueImpact">$48.2k</div>
+        <div class="delta" data-kpi="revenueImpactNote">Directional daily estimate</div>
+      </article>
+      <article class="card kpi">
+        <div class="label">Consent-Safe Coverage</div>
+        <div class="value good" data-kpi="consentCoverage">98.6%</div>
+        <div class="delta" data-kpi="consentCoverageNote">EU policy v2026.07 review open</div>
+      </article>
+    </section>
+
+    <section class="grid main-grid">
+      <article class="card">
+        <div class="section-title">
+          <h2>Delivery Funnel</h2>
+          <span class="timestamp" data-field="updatedAt">Updated 09:45 UTC</span>
+        </div>
+        <div class="funnel" data-funnel></div>
+      </article>
+
+      <article class="card">
+        <div class="section-title">
+          <h2>Data Quality Gates</h2>
+          <span class="timestamp" data-field="blockers">2 blockers</span>
+        </div>
+        <div class="split-list" data-quality></div>
+      </article>
+    </section>
+
+    <section class="grid lower-grid">
+      <article class="card">
+        <div class="section-title">
+          <h2>Consent-Safe Coverage</h2>
+          <span class="timestamp">By region</span>
+        </div>
+        <div class="region-grid" data-regions></div>
+      </article>
+
+      <article class="card">
+        <div class="section-title">
+          <h2>Reporting Readiness</h2>
+          <span class="timestamp" data-field="readiness">Hold for review</span>
+        </div>
+        <div class="readiness">
+          <div class="readiness-score">
+            <span class="label">Decision</span>
+            <strong data-field="decision">Hold for Review</strong>
+          </div>
+          <p data-field="decisionText">Two blocker gates must clear before advertiser-facing reports are marked ready.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="card incident-card">
+      <div class="section-title">
+        <h2>Incident Queue</h2>
+        <span class="timestamp">Prioritized by revenue impact</span>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Issue</th>
+            <th>Owner</th>
+            <th>Impact</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody data-incidents></tbody>
+      </table>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+{
+  "demo_note": "Fictionalized product input for portfolio use only.",
+  "business_request": "Create a streaming ads measurement dashboard that helps Ad Delivery, Measurement, Revenue Ops, Data Quality, and Privacy teams decide whether daily ad reporting is ready to publish.",
+  "target_roles": [
+    "Lead PM Ad Delivery",
+    "Reporting Product Manager",
+    "Data Quality Analyst",
+    "Privacy Measurement Lead",
+    "Revenue Operations"
+  ],
+  "event_types": [
+    "ad_request",
+    "ad_impression",
+    "ad_complete",
+    "ad_error",
+    "consent_status"
+  ],
+  "priority_kpis": {
+    "fill_rate": "filled_ad_requests / eligible_ad_requests",
+    "completion_rate": "ad_complete / ad_impression",
+    "latency": "p95 request-to-first-frame latency",
+    "ad_error_rate": "ad_error / ad_request",
+    "revenue_impact": "estimated lost impressions * blended CPM / 1000",
+    "consent_safe_measurement_coverage": "events with valid consent mode / measurable events"
+  },
+  "sample_counts": {
+    "eligible_ad_requests": 12000000,
+    "filled_ad_requests": 11016000,
+    "ad_impressions": 10400000,
+    "ad_completes": 9079200,
+    "ad_errors": 346000,
+    "events_with_valid_consent_mode": 12620800,
+    "measurable_events": 12800000
+  },
+  "constraints": [
+    "Do not publish reports when consent mode is missing or invalid.",
+    "Do not treat directional revenue impact as billing truth.",
+    "Show blocker gates separately from warning checks.",
+    "Keep example company names clearly marked as demo-only context."
+  ]
+}

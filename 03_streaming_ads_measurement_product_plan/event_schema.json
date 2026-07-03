@@ -1,0 +1,122 @@
+{
+  "demo_note": "Fictionalized sample schema for portfolio use only. Company names and platform contexts are illustrative, not integrations.",
+  "schema_version": "2026-07-demo-v1",
+  "common_fields": {
+    "event_id": "string, globally unique",
+    "event_type": "ad_request | ad_impression | ad_complete | ad_error | consent_status",
+    "event_ts": "ISO-8601 timestamp in UTC",
+    "session_id": "pseudonymous session identifier",
+    "viewer_region": "ISO country or region code",
+    "device_type": "ctv | mobile | web | tablet",
+    "app_version": "client app version",
+    "placement_id": "streaming ad placement identifier",
+    "content_id": "streaming content identifier",
+    "ad_break_id": "ad break identifier",
+    "consent_status": "granted | denied | unknown | not_required",
+    "measurement_mode": "personalized | contextual | aggregate | suppressed"
+  },
+  "events": [
+    {
+      "event_id": "evt_req_100001",
+      "event_type": "ad_request",
+      "event_ts": "2026-07-01T19:30:00.120Z",
+      "session_id": "ses_demo_84f2",
+      "viewer_region": "US-CA",
+      "device_type": "ctv",
+      "app_version": "8.14.2",
+      "placement_id": "plc_preroll_home_001",
+      "content_id": "cnt_stream_episode_4402",
+      "ad_break_id": "brk_pre_01",
+      "consent_status": "granted",
+      "measurement_mode": "personalized",
+      "request_context": {
+        "inventory_type": "preroll",
+        "content_rating": "TV-PG",
+        "network_latency_ms": 84,
+        "eligible": true
+      }
+    },
+    {
+      "event_id": "evt_imp_100002",
+      "event_type": "ad_impression",
+      "event_ts": "2026-07-01T19:30:01.015Z",
+      "session_id": "ses_demo_84f2",
+      "viewer_region": "US-CA",
+      "device_type": "ctv",
+      "app_version": "8.14.2",
+      "placement_id": "plc_preroll_home_001",
+      "content_id": "cnt_stream_episode_4402",
+      "ad_break_id": "brk_pre_01",
+      "consent_status": "granted",
+      "measurement_mode": "personalized",
+      "campaign_id": "cmp_demo_auto_q3",
+      "creative_id": "crt_demo_15s_778",
+      "delivery": {
+        "ad_server_latency_ms": 312,
+        "first_frame_latency_ms": 895,
+        "filled": true,
+        "fill_source": "direct"
+      }
+    },
+    {
+      "event_id": "evt_cmp_100003",
+      "event_type": "ad_complete",
+      "event_ts": "2026-07-01T19:30:16.280Z",
+      "session_id": "ses_demo_84f2",
+      "viewer_region": "US-CA",
+      "device_type": "ctv",
+      "app_version": "8.14.2",
+      "placement_id": "plc_preroll_home_001",
+      "content_id": "cnt_stream_episode_4402",
+      "ad_break_id": "brk_pre_01",
+      "consent_status": "granted",
+      "measurement_mode": "personalized",
+      "campaign_id": "cmp_demo_auto_q3",
+      "creative_id": "crt_demo_15s_778",
+      "completion": {
+        "quartile": "100",
+        "creative_duration_ms": 15000,
+        "observed_duration_ms": 15265
+      }
+    },
+    {
+      "event_id": "evt_err_100004",
+      "event_type": "ad_error",
+      "event_ts": "2026-07-01T19:37:22.482Z",
+      "session_id": "ses_demo_a91c",
+      "viewer_region": "US-NY",
+      "device_type": "mobile",
+      "app_version": "8.14.2",
+      "placement_id": "plc_midroll_live_003",
+      "content_id": "cnt_live_event_118",
+      "ad_break_id": "brk_mid_03",
+      "consent_status": "not_required",
+      "measurement_mode": "aggregate",
+      "error": {
+        "error_code": "VAST_TIMEOUT",
+        "error_stage": "creative_fetch",
+        "retry_attempted": true,
+        "retry_success": false
+      }
+    },
+    {
+      "event_id": "evt_con_100005",
+      "event_type": "consent_status",
+      "event_ts": "2026-07-01T19:29:58.901Z",
+      "session_id": "ses_demo_84f2",
+      "viewer_region": "US-CA",
+      "device_type": "ctv",
+      "app_version": "8.14.2",
+      "placement_id": "plc_preroll_home_001",
+      "content_id": "cnt_stream_episode_4402",
+      "ad_break_id": "brk_pre_01",
+      "consent_status": "granted",
+      "measurement_mode": "personalized",
+      "privacy": {
+        "policy_version": "demo_policy_2026_07",
+        "consent_source": "platform_cmp",
+        "expires_at": "2026-10-01T00:00:00.000Z"
+      }
+    }
+  ]
+}
