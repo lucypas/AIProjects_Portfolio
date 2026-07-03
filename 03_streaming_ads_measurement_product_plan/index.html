@@ -7,11 +7,50 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="presentation-shell">
+    <aside class="portfolio-rail" aria-label="Portfolio navigation">
+      <div class="rail-brand">
+        <span class="rail-mark">AI</span>
+        <div>
+          <p>AI Product Portfolio</p>
+          <strong>Ads Measurement</strong>
+        </div>
+      </div>
+
+      <nav class="rail-nav" aria-label="Streaming ads project artifacts">
+        <a class="active" href="index.html">
+          <span>D</span>
+          Dashboard
+        </a>
+        <a href="event_schema.json">
+          <span>E</span>
+          Event Schema
+        </a>
+        <a href="data_quality_checks.md">
+          <span>Q</span>
+          Quality Gates
+        </a>
+        <a href="sample_output.md">
+          <span>O</span>
+          Sample Output
+        </a>
+        <a href="risk_register.csv">
+          <span>R</span>
+          Risk Register
+        </a>
+      </nav>
+
+      <div class="rail-note">
+        <p>Portfolio demo</p>
+        <span>Ad delivery, reporting readiness, data quality, and consent-safe measurement coverage.</span>
+      </div>
+    </aside>
+
   <main class="shell">
     <header class="page-header">
       <div>
-        <p class="eyebrow">Streaming ads measurement</p>
-        <h1>Delivery, data quality, and consent-safe reporting readiness</h1>
+        <p class="eyebrow">Portfolio Artifact 03</p>
+        <h1>Streaming Ads Measurement Product Plan</h1>
         <p class="subtitle">A product mockup for monitoring ad delivery, impressions, completions, latency, errors, revenue impact, and privacy-safe measurement coverage.</p>
         <div class="badge-row" aria-label="Product areas">
           <span class="badge">Ad Delivery</span>
@@ -128,6 +167,7 @@
       </table>
     </section>
   </main>
+  </div>
   <script src="app.js"></script>
 </body>
 </html>
