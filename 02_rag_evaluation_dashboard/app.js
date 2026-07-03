@@ -6,8 +6,8 @@ const questions = [
     intent: "Media recommendation",
     expected_source_ids: "M001;M002;M004",
     risk_tier: "Medium",
-    track: "Media Search",
-    track_focus: "Tests personalization, ranking, and explicit user constraints.",
+    scenario: "Media Search",
+    scenario_focus: "Recommendation quality with explicit user constraints.",
     failure_mode: "Ignored exclusion",
   },
   {
@@ -17,8 +17,8 @@ const questions = [
     intent: "Troubleshooting answer",
     expected_source_ids: "H101",
     risk_tier: "Medium",
-    track: "Support Assistant",
-    track_focus: "Tests whether help-center retrieval beats unrelated product docs.",
+    scenario: "Support Assistant",
+    scenario_focus: "Help-center grounding and citation reliability.",
     failure_mode: "Wrong source",
   },
   {
@@ -28,8 +28,8 @@ const questions = [
     intent: "Policy answer",
     expected_source_ids: "H102",
     risk_tier: "High",
-    track: "Policy / Safety",
-    track_focus: "Tests policy hierarchy, safety rules, and launch hold behavior.",
+    scenario: "Policy / Safety",
+    scenario_focus: "Policy hierarchy and high-risk answer controls.",
     failure_mode: "Policy contradiction",
   },
 ];
@@ -231,14 +231,14 @@ function init() {
     .map((question) => `<option value="${question.question_id}">${question.user_question}</option>`)
     .join("");
 
-  document.querySelector("#trackGrid").innerHTML = questions
+  document.querySelector("#scenarioGrid").innerHTML = questions
     .map(
       (question) => `
-        <button class="track-card" type="button" data-track-question="${question.question_id}">
+        <button class="scenario-card" type="button" data-scenario-question="${question.question_id}">
           <p class="eyebrow">${question.question_id} / ${question.domain}</p>
-          <strong>${question.track}</strong>
-          <p>${question.track_focus}</p>
-          <div class="track-meta">
+          <strong>${question.scenario}</strong>
+          <p>${question.scenario_focus}</p>
+          <div class="scenario-meta">
             <span>${question.risk_tier} risk</span>
             <span>${question.failure_mode}</span>
           </div>
@@ -265,9 +265,9 @@ function init() {
     render();
   });
 
-  document.querySelectorAll("[data-track-question]").forEach((button) => {
+  document.querySelectorAll("[data-scenario-question]").forEach((button) => {
     button.addEventListener("click", () => {
-      state.questionId = button.dataset.trackQuestion;
+      state.questionId = button.dataset.scenarioQuestion;
       render();
     });
   });
@@ -291,8 +291,8 @@ function render() {
   const statusClass = result.status.toLowerCase();
 
   questionSelect.value = state.questionId;
-  document.querySelectorAll("[data-track-question]").forEach((button) => {
-    button.classList.toggle("active", button.dataset.trackQuestion === state.questionId);
+  document.querySelectorAll("[data-scenario-question]").forEach((button) => {
+    button.classList.toggle("active", button.dataset.scenarioQuestion === state.questionId);
   });
   document.querySelector("#retrievalProfile").textContent = result.retrieval_profile;
   document.querySelector("#retrievedIds").textContent = result.retrieved_source_ids;

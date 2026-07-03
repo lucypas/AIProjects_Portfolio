@@ -4,7 +4,7 @@ This artifact demonstrates how to evaluate search quality and RAG answer quality
 
 This project is designed as a product-quality and launch-readiness artifact, not a full production RAG implementation. It demonstrates how a team could define eval sets, score retrieval and answer quality separately, identify failure modes, and decide whether an AI assistant/search feature is ready for release.
 
-The dashboard is organized around three RAG evaluation tracks: media search, support assistant answers, and policy/safety responses. Each track represents a different production failure mode rather than a separate cloned app.
+The dashboard compares representative evaluation scenarios across media search, support assistant answers, and policy/safety responses. Each scenario highlights a distinct failure mode that would matter before launch.
 
 ## What Is Included
 
